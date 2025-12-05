@@ -13,18 +13,12 @@ import pandas as pd
 
 print(">>> main.py started")
 
-
-# -------------------------------------------------------------------
 # CONFIG
-# -------------------------------------------------------------------
 
 BOOKS_DIR = "abc_books"
 DB_PATH = "tunes.db"
 
-# -------------------------------------------------------------------
-# EXAMPLE DB FUNCTIONS FROM STARTER (not used in main flow, but left in)
-# -------------------------------------------------------------------
-
+# EXAMPLE DB FUNCTIONS FROM STARTER 
 
 def do_databasse_stuff() -> None:
     """
@@ -78,11 +72,7 @@ def my_sql_database() -> None:
 
     conn.close()
 
-
-# -------------------------------------------------------------------
 # DATABASE SETUP & INSERT
-# -------------------------------------------------------------------
-
 
 def init_db(db_path: str = DB_PATH, reset: bool = False) -> sqlite3.Connection:
     """
@@ -141,11 +131,7 @@ def insert_tunes(conn: sqlite3.Connection, tunes: List[Dict]) -> None:
     )
     conn.commit()
 
-
-# -------------------------------------------------------------------
 # ABC PARSER
-# -------------------------------------------------------------------
-
 
 def parse_abc_file(file_path: str, book_number: int) -> List[Dict]:
     """
@@ -277,9 +263,7 @@ def load_all_tunes_from_books(
     print(f"\nDone. Total tunes inserted into DB: {total_tunes}")
 
 
-# -------------------------------------------------------------------
 # PANDAS DATA LOADING & ANALYSIS FUNCTIONS
-# -------------------------------------------------------------------
 
 
 def load_tunes_dataframe(db_path: str = DB_PATH) -> pd.DataFrame:
@@ -377,11 +361,7 @@ def most_common_keys(df: pd.DataFrame, top_n: int = 10) -> pd.Series:
         return pd.Series(dtype=int)
     return df["key"].value_counts().head(top_n)
 
-
-# -------------------------------------------------------------------
 # SIMPLE TEXT MENU UI
-# -------------------------------------------------------------------
-
 
 def ensure_db_populated() -> None:
     """
