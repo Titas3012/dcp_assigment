@@ -3,8 +3,6 @@ Name: Titas Utyra
 Student Number: C24448002
 Lectured And Mentored By: Dr.Brian Duggan
 
-
-
 Description of the Project:
 This project implements a complete end to end Python application for loading, parsing, analysing, and querying ABC music notation files sourced from multiple folders (“abc_books”).
 The aim is to demonstrate core competencies in file parsing, database management, pandas based analysis, and building an interactive data centric application with proper version control.
@@ -15,6 +13,9 @@ Parses all tunes inside each file into structured Python dictionaries.
 Stores the tune metadata and full ABC notation into an SQLite database.
 Loads the database into a pandas DataFrame for easy analysis.
 Provides an interactive menu based user interface for querying tunes.
+
+<img width="296" height="160" alt="image" src="https://github.com/user-attachments/assets/5d3abf80-8ce3-41ee-99ec-69b301b27a35" />
+
 
 Includes analysis utilities such as:
 Tunes per book.
